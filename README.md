@@ -16,10 +16,27 @@ This repo contains several lessons that are designed to help you learn how to wr
 
 The suggested use of this repository follows.
 
+### Basic GitHub setup
+
 1. Browse to [github.com](https://github.com/); if you don't have an account, create one, and then log in
 1. Browse to [github.com/mcalthrop/testing-with-java](https://github.com/mcalthrop/testing-with-java)
 1. Fork the repository into your own GitHub account (click the **Fork** button near the top right of the page)
 1. Open a terminal/shell app on your local machine, and follow the instructions below
+
+### Set git user name and email
+
+Configure your name and email address for commits (be sure to use the email address you have registered with GitHub):
+
+```bash
+git config --global user.name "Your Name"
+```
+
+```bash
+git config --global user.email "your.name@example.com"
+```
+
+
+### Create directory for development
 
 Go to your home directory:
 
@@ -39,6 +56,8 @@ Change to that directory:
 cd development
 ```
 
+### Clone the forked repository
+
 Clone the repository you just created, remembering to replace `your_github_username` with the username you created on GitHub:
 
 ```bash
@@ -51,6 +70,8 @@ Change into the directory for that repository:
 cd testing-with-java
 ```
 
+### Use a git branch for your work
+
 Create a git branch called `learning` that will hold the changes you make while you are learning, and switch to it:
 
 ```bash
@@ -58,6 +79,8 @@ git checkout -b learning
 ```
 
 (You could call that branch something other than `learning`, but that seems as good a name as any).
+
+### Start the lessons
 
 You can then proceed with following the lessons as listed above.
 
