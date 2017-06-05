@@ -18,13 +18,13 @@
 - execution of the [Setup](../step-0-setup/) procedure
 
 
-## Writing a simple jUnit test
+## Getting started
 
 ### What is jUnit?
 
 JUnit is a unit testing framework for the Java programming language. It enables us to write repeatable tests that can be incorporated into a Continuous Integration workflow.
 
-### Getting started
+### Fork and clone
 
 - you may want to fork this repo
 - clone the repo to your local machine
@@ -78,11 +78,14 @@ public class Factorial {
 > NOTE: this is a slightly contrived example, and could be simplified (for example, the `calculate()` method only needs to be `static`).
 > However, the main purpose of this example is to enable us to see how a set of jUnit tests can be developed, including the ability to use `@Before` to define steps that are common to all tests.
 
+
+## Testing the code
+
 ### How would you manually test this?
 
 Consider how you would manually test this. How would you do it?
 
-Hopefully it will be evident that although it would probably be ok to manually test only this class, once other components are introduced into the software, manual testing quickly becomes an inadequate method of testing.
+> Hopefully it will be evident that although it would probably be ok to manually test only this class, once other components are introduced into the software, manual testing quickly becomes an inadequate method of testing.
 
 ### Write a test class
 
