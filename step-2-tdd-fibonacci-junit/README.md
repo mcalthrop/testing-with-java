@@ -1,3 +1,5 @@
+[[home]](../)
+
 # TDD Fibonacci using jUnit
 
 
@@ -10,7 +12,7 @@
 
 ### Prerequisites
 
-- completion of [Introducing jUnit](../step-1-junit/introducing-junit.md)
+- completion of [Introducing jUnit](../step-1-junit/)
 
 
 ## Background
