@@ -34,7 +34,7 @@ JUnit is a unit testing framework for the Java programming language. It enables 
 - you may want to fork this repo
 - clone the repo to your local machine
 - open the project in your editor or IDE
-- open a terminal application, and make sure you are in the `step-1-junit/code` directory
+- open a terminal application, and make sure you are in the `step-1-junit/src` directory
 
 
 ### Create a simple Java class

@@ -47,7 +47,7 @@ And all this further increases our confidence in the code we write!
 - you may want to fork this repo
 - clone the repo to your local machine
 - open the project in your editor or IDE
-- open a terminal application, and make sure you are in the `step-2-tdd-fibonacci-junit/code` directory
+- open a terminal application, and make sure you are in the `step-2-tdd-fibonacci-junit/src` directory
 
 ### Fibonacci sequence
 
