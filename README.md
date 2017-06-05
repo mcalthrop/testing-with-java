@@ -16,7 +16,7 @@ This repo contains several lessons that are designed to help you learn how to wr
 
 The suggested use of this repository follows.
 
-1. Browse [github.com](https://github.com/); if you don't have an account, create one, and then log in
+1. Browse to [github.com](https://github.com/); if you don't have an account, create one, and then log in
 1. Browse to [github.com/mcalthrop/testing-with-java](https://github.com/mcalthrop/testing-with-java)
 1. Fork the repository into your own GitHub account (click the **Fork** button near the top right of the page)
 1. Open a terminal/shell app on your local machine, and follow the instructions below
