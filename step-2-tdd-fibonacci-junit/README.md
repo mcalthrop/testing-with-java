@@ -42,6 +42,13 @@ And all this further increases our confidence in the code we write!
 
 ## The exercise
 
+### Getting started
+
+- you may want to fork this repo
+- clone the repo to your local machine
+- open the project in your editor or IDE
+- open a terminal application, and make sure you are in the `step-2-tdd-fibonacci-junit/code` directory
+
 ### Fibonacci sequence
 
 The Fibonacci sequence is a list of numbers whereby each number is the sum of the previous two numbers.
