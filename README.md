@@ -51,7 +51,7 @@ Change into the directory for that repository:
 cd testing-with-java
 ```
 
-Create a branch called `learning` that will hold the changes you make while you are learning, and switch to it:
+Create a git branch called `learning` that will hold the changes you make while you are learning, and switch to it:
 
 ```bash
 git checkout -b learning
