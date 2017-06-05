@@ -82,7 +82,7 @@ git checkout -b learning
 
 ### Start the lessons
 
-You can then proceed with following the lessons as listed above.
+You can then [proceed with the lessons](../README.md).
 
 Remember to regularly commit the changes you make, and to push your locally-committed code back up to the `learning` branch on your GitHub account like this:
 
