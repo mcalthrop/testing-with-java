@@ -13,6 +13,7 @@
 - software installed:
   - git 1.x
   - java 8
+  - maven 3.x
 
 **Note for Windows 10 users:** please see [github.com/mcalthrop/ubuntu-windows-setup](https://github.com/mcalthrop/ubuntu-windows-setup) for information about how to set up Ubuntu on your system.
 
