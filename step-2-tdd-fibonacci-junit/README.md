@@ -104,7 +104,7 @@ public class FibonacciTest {
 
 ### Run the test
 
-Use the `run-tests.bash` script provided:
+Use the `run-tests.bash` script provided in the `step-2-tdd-fibonacci-junit` directory:
 
 ```bash
 ./run-tests.bash

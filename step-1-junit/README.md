@@ -106,29 +106,18 @@ Note each part of that test class:
 In order to be able to run the test, we need to first compile the two Java classes:
 
 ```bash
-javac -classpath .:junit-4.12.jar:hamcrest-core-1.3.jar Factorial.java FactorialTest.java
+javac -classpath .:src:test:test/junit-4.12.jar:test/hamcrest-core-1.3.jar src/Factorial.java test/FactorialTest.java
 ```
 
 Then we can run the test:
 
 ```bash
-java -classpath .:junit-4.12.jar:hamcrest-core-1.3.jar org.junit.runner.JUnitCore FactorialTest
+java -classpath .:src:test:test/junit-4.12.jar:test/hamcrest-core-1.3.jar org.junit.runner.JUnitCore FactorialTest
 ```
 
 ### Automate running the test
 
-Having to specify the class path before every command is tiresome. We can automate the whole process by using a simple shell script:
- 
-```bash
-#!/bin/bash -ex
-
-export CLASSPATH=.:junit-4.12.jar:hamcrest-core-1.3.jar
-
-javac Factorial.java FactorialTest.java
-java org.junit.runner.JUnitCore FactorialTest
-```
-
-That code has been provided in the `run-tests.bash` file in this repo, so we can run it:
+Having to specify the class path before every command is tiresome. We can automate the whole process by using a simple shell script, which has been provided in the `run-tests.bash` file in the `step-1-junit` directory:
 
 ```bash
 ./run-tests.bash
