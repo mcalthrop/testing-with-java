@@ -31,6 +31,22 @@ JUnit is a unit testing framework for the Java programming language. It enables 
 - open the project in your editor or IDE
 - open a terminal application, and make sure you are in the `step-1-junit` directory
 
+### Observe the directory hierarchy
+
+Note the directory hierarchy in the starter code:
+
+```
+├── src
+│   └── Factorial.java
+└── test
+    ├── FactorialTest.java
+    ├── hamcrest-core-1.3.jar
+    └── junit-4.12.jar
+```
+
+There is a clear separation between the source code (the `src` directory), and tests written against that source (the `test` directory).
+
+This is a very common pattern used when arranging source code.
 
 ### Create a simple Java class
 
@@ -61,6 +77,12 @@ public class Factorial {
 
 > NOTE: this is a slightly contrived example, and could be simplified (for example, the `calculate()` method only needs to be `static`).
 > However, the main purpose of this example is to enable us to see how a set of jUnit tests can be developed, including the ability to use `@Before` to define steps that are common to all tests.
+
+### How would you manually test this?
+
+Consider how you would manually test this. How would you do it?
+
+Hopefully it will be evident that although it would probably be ok to manually test only this class, once other components are introduced into the software, manual testing quickly becomes an inadequate method of testing.
 
 ### Write a test class
 
