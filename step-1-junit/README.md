@@ -274,6 +274,22 @@ Note:
 
 Then re-run the tests.
 
+### Final output
+
+The final output of running `./run-tests.bash` should look something like this:
+
+```
++ export CLASSPATH=.:junit-4.12.jar:hamcrest-core-1.3.jar
++ CLASSPATH=.:junit-4.12.jar:hamcrest-core-1.3.jar
++ javac Factorial.java FactorialTest.java
++ java org.junit.runner.JUnitCore FactorialTest
+JUnit version 4.12
+....
+Time: 0.013
+
+OK (4 tests)
+```
+
 
 ## Conclusion
 
@@ -290,65 +306,3 @@ Then re-run the tests.
 - http://junit.org/junit4/
 - https://github.com/junit-team/junit4
 - https://en.wikipedia.org/wiki/Hamcrest
-
-### Final code and output
-
-The final version of `FactorialTest.java` should look something like this:
-
-```java
-import static org.junit.Assert.assertEquals;
-import org.junit.Before;
-import org.junit.Test;
-
-public class FactorialTest {
-    private Factorial factorial;
-
-    @Before
-    public void setUp() {
-        factorial = new Factorial();
-    }
-
-    @Test
-    public void calculate_0() {
-        int testStartValue = 0;
-        int expectedResult = 0;
-
-        assertEquals(expectedResult, factorial.calculate(testStartValue));
-    }
-
-    @Test
-    public void calculate_1() {
-        int testStartValue = 1;
-        int expectedResult = 1;
-
-        assertEquals(expectedResult, factorial.calculate(testStartValue));
-    }
-
-    @Test
-    public void calculate_5() {
-        int testStartValue = 5;
-        int expectedResult = 120;
-
-        assertEquals(expectedResult, factorial.calculate(testStartValue));
-    }
-
-    @Test(expected=IllegalArgumentException.class)
-    public void calculate_negative() {
-        factorial.calculate(-5);
-    }
-}
-```
-
-And the output of running `./run-tests.bash` should look something like this:
-
-```
-+ export CLASSPATH=.:junit-4.12.jar:hamcrest-core-1.3.jar
-+ CLASSPATH=.:junit-4.12.jar:hamcrest-core-1.3.jar
-+ javac Factorial.java FactorialTest.java
-+ java org.junit.runner.JUnitCore FactorialTest
-JUnit version 4.12
-....
-Time: 0.013
-
-OK (4 tests)
-```

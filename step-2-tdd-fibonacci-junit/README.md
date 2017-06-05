@@ -281,6 +281,22 @@ Looking at the requirements, we can see that a negative number as a parameter is
 
 So you can now use a TDD approach to develop that functionality. Refer to the tests and code in the previous lesson for relevant syntax.
 
+### Final output
+
+The final output of running `./run-tests.bash` should look something like this:
+
+```
++ export CLASSPATH=.:src:test:test/junit-4.12.jar:test/hamcrest-core-1.3.jar
++ CLASSPATH=.:src:test:test/junit-4.12.jar:test/hamcrest-core-1.3.jar
++ javac src/Fibonacci.java
++ javac test/FibonacciTest.java
++ java org.junit.runner.JUnitCore FibonacciTest
+JUnit version 4.12
+....
+Time: 0.014
+
+OK (4 tests)
+```
 
 ## Conclusion
 
@@ -294,68 +310,3 @@ So you can now use a TDD approach to develop that functionality. Refer to the te
 - https://martinfowler.com/bliki/TestDrivenDevelopment.html
 - http://agiledata.org/essays/tdd.html
 - http://www.drdobbs.com/architecture-and-design/dr-dobbs-agile-update-0110/222301633
-
-### Final code and output
-
-`FibonacciTest.java` should look like this:
-
-```java
-import static org.junit.Assert.assertEquals;
-import org.junit.Before;
-import org.junit.Test;
-
-public class FibonacciTest {
-    private Fibonacci fibonacci;
-
-    @Before
-    public void setUp() {
-        fibonacci = new Fibonacci();
-    }
-
-    @Test
-    public void calculate_0() {
-        int testIndex = 0;
-        int expectedResult = 1;
-
-        assertEquals(expectedResult, fibonacci.calculate(testIndex));
-    }
-
-    @Test
-    public void calculate_1() {
-        int testIndex = 1;
-        int expectedResult = 1;
-
-        assertEquals(expectedResult, fibonacci.calculate(testIndex));
-    }
-
-    @Test
-    public void calculate_6() {
-        int testIndex = 6;
-        int expectedResult = 13;
-
-        assertEquals(expectedResult, fibonacci.calculate(testIndex));
-    }
-
-    @Test(expected=IllegalArgumentException.class)
-    public void calculate_negative() {
-        fibonacci.calculate(-1);
-    }
-}
-```
-
-And `Fibonacci.java` something like this:
-
-```java
-class Fibonacci {
-    public int calculate(int index) {
-        if (index < 0) {
-            throw new IllegalArgumentException("Fibonacci numbers are defined only by non-negative indexes.");
-        }
-        if (index <= 1) {
-            return 1;
-        }
-
-        return calculate(index - 1) + calculate(index - 2);
-    }
-}
-```
