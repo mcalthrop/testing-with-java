@@ -1,2 +1,2 @@
-class Fibonacci {
+public class Fibonacci {
 }
