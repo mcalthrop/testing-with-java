@@ -34,7 +34,7 @@ JUnit is a unit testing framework for the Java programming language. It enables 
 - you may want to fork this repo
 - clone the repo to your local machine
 - open the project in your editor or IDE
-- open a terminal application, and make sure you are in the `step-1-junit/src` directory
+- open a terminal application, and make sure you are in the `step-1-junit` directory
 
 
 ### Create a simple Java class
@@ -44,7 +44,7 @@ JUnit is a unit testing framework for the Java programming language. It enables 
 
 We'll take a simple requirement: write a Java class to implement [factorial](https://en.wikipedia.org/wiki/Factorial) functionality.
 
-Open the empty `Factorial.java` file, enter the following code, and save the file:
+Open the empty `src/Factorial.java` file, enter the following code, and save the file:
 
 ```java
 public class Factorial {
@@ -71,7 +71,7 @@ public class Factorial {
 
 Let's now write a class that jUnit can use to test the `Factorial` class.
 
-Open the empty `FactorialTest.java` file, enter the following code, and save the file:
+Open the empty `test/FactorialTest.java` file, enter the following code, and save the file:
 
 ```java
 import static org.junit.Assert.assertEquals;
@@ -200,7 +200,7 @@ Here's what we will do:
 - add a `@Before` code block in the test class – this will instantiate the `Factorial` class
 - remove the code that instantiates the `Factorial` class within each test, and refactor it to use the private `factorial` class variable
 
-> Implement each of those changes in `FactorialTest.java`
+> Implement each of those changes in `test/FactorialTest.java`
 
 Once you have finished making those changes, the test class will look like this:
 

@@ -47,7 +47,7 @@ And all this further increases our confidence in the code we write!
 - you may want to fork this repo
 - clone the repo to your local machine
 - open the project in your editor or IDE
-- open a terminal application, and make sure you are in the `step-2-tdd-fibonacci-junit/src` directory
+- open a terminal application, and make sure you are in the `step-2-tdd-fibonacci-junit` directory
 
 ### Fibonacci sequence
 
@@ -77,7 +77,7 @@ Which means, for example, that passing in a parameter of `6` would return `13`.
 
 ### Write the test
 
-Open `FibonacciTest.java` in your editor or IDE. We will write tests in the same way that we wrote tests in the previous lesson:
+Open `test/FibonacciTest.java` in your editor or IDE. We will write tests in the same way that we wrote tests in the previous lesson:
 
 ```java
 import static org.junit.Assert.assertEquals;
@@ -133,7 +133,7 @@ In its most basic form, TDD requires that you only write enough code &ndash; and
 So let's add enough code to `FibonacciTest.java` to make the failing test pass:
 
 ```java
-class Fibonacci {
+public class Fibonacci {
     public int calculate(int index) {
         return 1;
     }
@@ -245,7 +245,7 @@ This is what we would expect, as we have not actually written the code that impl
 Finally we get to writing the meat of the code!
 
 ```java
-class Fibonacci {
+public class Fibonacci {
     public int calculate(int index) {
         if (index == 0 || index == 1) {
             return 1;
@@ -279,7 +279,11 @@ We have now implemented the basic Fibonacci functionality.
 
 Looking at the requirements, we can see that a negative number as a parameter is considered invalid.
 
-So you can now use a TDD approach to develop that functionality. Refer to the tests and code in the previous lesson for relevant syntax.
+### Write the test and code
+
+It's now over to you to complete the task by writing a failing test, and then by writing the code to make that test pass.
+
+Refer to the tests and code in the previous lesson for relevant syntax.
 
 ### Final output
 
