@@ -1,4 +1,4 @@
-[[home]](../)
+[[home]](../README.md)
 
 # TDD Fibonacci using jUnit
 
