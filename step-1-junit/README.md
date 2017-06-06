@@ -67,7 +67,7 @@ public class Factorial {
         int result = start;
 
         if (result > 1) {
-            result = start * factorial(start - 1);
+            result = start * calculate(start - 1);
         }
 
         return result;
