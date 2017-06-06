@@ -19,7 +19,7 @@
 
 ```bash
 mvn archetype:generate \
-  -DarchetypeGroupId=adacollege.fibonacci \
+  -DarchetypeGroupId=de.bripkens \
   -DarchetypeArtifactId=java-quickstart \
   -DarchetypeVersion=0.2.0 \
   -DgroupId=adacollege.fibonacci \
