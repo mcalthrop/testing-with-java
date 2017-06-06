@@ -15,7 +15,7 @@
 
 ### Prerequisites
 
-- execution of the [Setup](../step-0-setup/) procedure
+- execution of the [Setup](../step-0-setup/README.md) procedure
 
 
 ## Getting started

@@ -12,7 +12,7 @@
 
 ### Prerequisites
 
-- completion of [Introducing jUnit](../step-1-junit/)
+- completion of [Introducing jUnit](../step-1-junit/README.md)
 
 
 ## Background
