@@ -1,9 +1,15 @@
-#!/bin/bash -ex
+#!/bin/bash -e
 
-PWD=$(pwd)
-# NOTE: the following env var is for use with git bash on Windows installations only,
+# NOTE: the ${JDK_BIN} env var is for use with git bash on Windows installations only,
 # and will vary according to the version of the JDK you installed:
-export PATH="${PATH}:/c/Program Files/Java/jdk1.8.0_131/bin"
+JDK_BIN="/c/Program Files/Java/jdk1.8.0_131/bin"
+[[ ! -d ${JDK_BIN} ]] && {
+  echo "ERROR: JDK bin directory does not exist: '${JDK_BIN}'"
+  exit 1
+}
+set -x
+export PATH="${PATH}:${JDK_BIN}"
+PWD=$(pwd)
 export CLASSPATH=.:${PWD}/src:${PWD}/test:test/junit-4.12.jar:test/hamcrest-core-1.3.jar
 
 javac src/Factorial.java
