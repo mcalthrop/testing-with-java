@@ -2,8 +2,12 @@
 
 # NOTE: the ${JDK_BIN} env var is for use with git bash on Windows installations only,
 # and will vary according to the version of the JDK you installed:
-JDK_BIN="/c/Program Files/Java/jdk1.8.0_131/bin"
-[[ ! -d ${JDK_BIN} ]] && {
+PROGRAM_FILES_DIR="/c/Program Files"
+JDK_BIN="${PROGRAM_FILES_DIR}/Java/jdk1.8.0_131/bin"
+# Error if:
+# - we are on Windows (ie, the "/c/Program Files" dir exists), AND
+# - specified JDK bin dir does not exist
+[[ -d ${PROGRAM_FILES_DIR} && ! -d ${JDK_BIN} ]] && {
   echo "ERROR: JDK bin directory does not exist: '${JDK_BIN}'"
   exit 1
 }
