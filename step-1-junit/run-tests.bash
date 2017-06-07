@@ -1,8 +1,8 @@
 #!/bin/bash -e
 
+PROGRAM_FILES_DIR="/c/Program Files"
 # NOTE: the ${JDK_BIN} env var is for use with git bash on Windows installations only,
 # and will vary according to the version of the JDK you installed:
-PROGRAM_FILES_DIR="/c/Program Files"
 JDK_BIN="${PROGRAM_FILES_DIR}/Java/jdk1.8.0_131/bin"
 # Error if:
 # - we are on Windows (ie, the "/c/Program Files" dir exists), AND
