@@ -1,10 +1,11 @@
-#!/bin/bash -e
+#!/bin/bash -ex
 
 PROGRAM_FILES_DIR="/c/Program Files"
 # Check if we are on Windows
 [[ -d ${PROGRAM_FILES_DIR} ]] && {
+  export JAVA_HOME=${PROGRAM_FILES_DIR}/Java/jdk1.8.0_131
   # NOTE: the ${JDK_BIN} will vary according to the version and location of the JDK you installed:
-  JDK_BIN=${PROGRAM_FILES_DIR}/Java/jdk1.8.0_131/bin
+  JDK_BIN=${JAVA_HOME}/bin
   # Error if specified JDK bin dir does not exist
   [[ ! -d ${JDK_BIN} ]] && {
     echo "ERROR: JDK bin directory does not exist: '${JDK_BIN}'"
@@ -20,7 +21,6 @@ PROGRAM_FILES_DIR="/c/Program Files"
   export PATH="${PATH}:${JDK_BIN}:${MVN_BIN}"
 }
 
-set -x
 PWD=$(pwd)
 export CLASSPATH=.:${PWD}/src:${PWD}/test:test/junit-4.12.jar:test/hamcrest-core-1.3.jar
 

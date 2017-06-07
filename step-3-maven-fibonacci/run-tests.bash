@@ -28,6 +28,4 @@ mvn -version
 java -version
 javac -version
 
-javac src/Fibonacci.java
-javac test/FibonacciTest.java
-java org.junit.runner.JUnitCore FibonacciTest
+mvn clean test
