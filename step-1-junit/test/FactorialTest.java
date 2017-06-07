@@ -25,4 +25,12 @@ public class FactorialTest {
 
         assertEquals(expectedResult, factorial.calculate(testStartValue));
     }
+
+    @Test
+    public void calculate_5() {
+        int testStartValue = 5;
+        int expectedResult = 120;
+
+        assertEquals(expectedResult, factorial.calculate(testStartValue));
+    }
 }
