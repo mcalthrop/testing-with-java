@@ -11,7 +11,7 @@ PROGRAM_FILES_DIR="/c/Program Files"
     exit 1
   }
   # NOTE: the ${MVN_BIN} will vary according to the version and location of maven you installed:
-  MVN_BIN="~/Downloads/apache-maven-3.5.0/bin"
+  MVN_BIN=~/Downloads/apache-maven-3.5.0/bin
   # Error if specified maven bin dir does not exist
   [[ ! -d ${MVN_BIN} ]] && {
     echo "ERROR: maven bin directory does not exist: '${MVN_BIN}'"

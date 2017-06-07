@@ -4,7 +4,7 @@ PROGRAM_FILES_DIR="/c/Program Files"
 # Check if we are on Windows
 [[ -d ${PROGRAM_FILES_DIR} ]] && {
   # NOTE: the ${JDK_BIN} will vary according to the version and location of the JDK you installed:
-  JDK_BIN="${PROGRAM_FILES_DIR}/Java/jdk1.8.0_131/bin"
+  JDK_BIN=${PROGRAM_FILES_DIR}/Java/jdk1.8.0_131/bin
   # Error if specified JDK bin dir does not exist
   [[ ! -d ${JDK_BIN} ]] && {
     echo "ERROR: JDK bin directory does not exist: '${JDK_BIN}'"
