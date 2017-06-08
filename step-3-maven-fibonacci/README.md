@@ -7,6 +7,7 @@
 
 ### Objectives
 
+- understand dependency management concepts
 - understand the basics of how [Maven](https://maven.apache.org/) works
 - apply this to setting up a Java project with jUnit tests
 
@@ -88,7 +89,7 @@ src
                         └── FibonacciTest.java
 ```
 
-What we are introducing here is a commonly-used convention for _namespacing_ packages in Java.
+What we are introducing here is a commonly-used _directory structure_ and _package namespacing_ convention for Java projects.
 
 ### Why namespace?
 
@@ -100,7 +101,7 @@ In Java, it is common to namespace in a form of reverse domain name order. Hence
 package com.mattcalthrop.examples.fibonacci;
 ```
 
-Once this namespace is defined, we create a directory hierarchy that matches the package name – which explains the directory hierarchy above.
+Once this namespace is defined, we create a directory hierarchy that reflects the package name – which explains the directory hierarchy above.
 
 ### Creating our `pom.xml`
 
@@ -120,6 +121,7 @@ Once this namespace is defined, we create a directory hierarchy that matches the
 ### What we've covered
 
 - the basics of how [Maven](https://maven.apache.org/) works
+- and how it implements dependency management
 - we have set up a previous project to use Maven instead of including the external libraries in the source code
 
 ### Further reading
