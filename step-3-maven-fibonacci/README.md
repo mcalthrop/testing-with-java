@@ -105,15 +105,125 @@ Once this namespace is defined, we create a directory hierarchy that reflects th
 
 ### Creating our `pom.xml`
 
-> _TODO_
+So we are going to create a `pom.xml` file for our project.
+
+Here is how we will start:
+
+```xml
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.mattcalthrop.examples.fibonacci</groupId>
+    <artifactId>fibonacci</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>fibonacci</name>
+    <description>Simple Fibonacci class with tests using Maven</description>
+</project>
+```
+
+### Adding dependencies
+
+We can now add in the required dependencies:
+
+```xml
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.mattcalthrop.examples.fibonacci</groupId>
+    <artifactId>fibonacci</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>fibonacci</name>
+    <description>Simple Fibonacci class with tests using Maven</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-core</artifactId>
+            <version>1.3</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>
+```
 
 ### Running maven
 
-> _TODO_
+As in previous lessons, there is a `run-tests.bash` file that we execute:
 
-### Execution from within Intellij
+```bash
+./run-tests.bash
+```
 
-> _TODO_
+The essence of that file is the last line:
+
+```bash
+mvn clean test
+```
+
+This instructs Maven to:
+
+- clean up anything that may have been generated during a time that Maven was previously run
+- then run the tests
+
+### Maven properties
+
+When building a `pom.xml`, it is common practice to use Maven _properties_ to effectively define constants that are available for use in later parts of the file.
+
+So we can define properties for the different versions of modules that we depend upon:
+
+```xml
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.mattcalthrop.examples.fibonacci</groupId>
+    <artifactId>fibonacci</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>fibonacci</name>
+    <description>Simple Fibonacci class with tests using Maven</description>
+
+    <properties>
+        <hamcrest.version>1.3</hamcrest.version>
+        <junit.version>4.11</junit.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-core</artifactId>
+            <version>${hamcrest.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>
+```
+
+### Task: incorporate `Factorial` class and tests
+
+Your task is to incorporate the `Factorial` class and tests from the [Introducing jUnit](../step-1-junit/README.md) lesson.
+
+Use the same directory- and package-naming convention used for the `Fibonacci` class and tests in this directory.
 
 
 ## Conclusion
