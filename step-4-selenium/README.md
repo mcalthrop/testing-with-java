@@ -103,7 +103,7 @@ Note that the way we tell the browser to go to a specific URL is by calling the 
 
 Now that we have the scaffolding out of the way, we can add a simple test.
 
-A simple test we can write is to check to see if the `<title>` element on the web page is an expected value:
+We are going to check to see if the `<title>` element on the web page is an expected value:
 
 ```java
     @Test
@@ -113,6 +113,14 @@ A simple test we can write is to check to see if the `<title>` element on the we
 ```
 
 Note that we are not actually directly specifying an HTML element to search for &ndash; the interface provided by Selenium contains a `getTitle()` method that does this for us.
+
+### Run the tests
+
+Here's the command to run the integration tests from your terminal:
+
+```bash
+mvn clean verify
+```
 
 ### Add a more complex test
 
@@ -149,6 +157,8 @@ Note the following:
 - and then call the `submit()` method to submit the form
 - the next block of code looks complex, but is simple in concept: it is waiting until the `<title>` contains an expected value
 - if that does not happen within the specified time, the test will fail
+
+> Run the tests again
 
 ### Finding HTML elements
 
