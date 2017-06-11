@@ -162,7 +162,7 @@ To do this, just right-click inside the text input box, and one of the menu item
 
 The developer toolbar should now be open in the **Elements** tab:
 
-[![inspecting HTML input element](./google-inspect-html-element.png)](./google-inspect-html-element.png)
+![inspecting HTML input element](./google-inspect-html-element.png)
 
 In the _Elements_ tab on the right, you can see the `<input>` element highlighted, and on the next line (still highlighted) you can see `name=q` &ndash; this tells us that the `name` attribute of the search field has a value of `q` (presumably short for "query").
 
