@@ -14,7 +14,7 @@
 ### Prerequisites
 
 - completion of [Introducing jUnit](../step-1-junit/README.md)
-- completion of [TDD Fibonacci using jUnit](../step-2-tdd-fibonacci-junit)
+- completion of [TDD Fibonacci using jUnit](../step-2-tdd-fibonacci-junit/README.md)
 
 
 ## Maven basics
