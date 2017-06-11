@@ -182,6 +182,8 @@ The `pom.xml` file included in this repository is reusable in other projects &nd
 
 ### Further reading
 
+- http://www.seleniumhq.org/docs/03_webdriver.jsp#selenium-webdriver-api-commands-and-operations
+- http://www.seleniumhq.org/docs/03_webdriver.jsp
 - http://www.seleniumhq.org/
 - http://www.seleniumhq.org/projects/webdriver/
 - https://github.com/Ardesco/Selenium-Maven-Template
