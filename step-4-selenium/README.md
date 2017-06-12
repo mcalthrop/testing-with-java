@@ -36,6 +36,15 @@ With Selenium, we can write Java programs that do the following:
 
 ## Creating a Selenium test
 
+### Requirements
+
+Before writing the tests, we will define some requirements.
+
+**Given** my starting URL is `http://www.google.co.uk`:
+
+1. **Then** the `<title>` tag should start with the text `Google`
+1. **When** I search for the term `Sausages`, **then** the `<title>` tag should start with the text `Sausages`. 
+
 ### Create the test class
 
 The starter code already contains an empty class for the test.
